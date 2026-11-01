@@ -502,6 +502,6 @@ with tab2:
 st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
 st.markdown(f"""
 <div style="text-align:center; font-family:'JetBrains Mono'; font-size:11px; color:#7B8794;">
-    THREAT COPILOT · RAG PIPELINE · FAISS · LLAMA 3 VIA GROQ · HALLUCINATION-GUARDED · STREAMLIT
+    THREAT COPILOT · RAG PIPELINE · FAISS · GPT-OSS-120B VIA GROQ · HALLUCINATION-GUARDED · STREAMLIT
 </div>
 """, unsafe_allow_html=True)

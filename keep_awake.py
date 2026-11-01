@@ -29,7 +29,7 @@ def wake_streamlit():
 
         try:
             wake_button = driver.find_element(
-                By.XPATH, "//button[contains(text(), 'Wake up app')]"
+                By.XPATH, "//button[contains(., 'get this app back up') or contains(., 'Wake up')]"
             )
             wake_button.click()
             print("App was asleep — clicked Wake up button.")

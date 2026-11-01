@@ -3,7 +3,7 @@ RAG_ENGINE.PY — Threat Copilot Query Engine
 ──────────────────────────────────────────────
 Takes a security analyst's question in plain English,
 searches the 2,788-incident knowledge base, and returns
-a grounded answer using Groq (LLaMA 3).
+a grounded answer using Groq (gpt-oss-120b).
 
 Includes a HALLUCINATION GUARD — this is the detail
 that separates this project from a typical RAG demo.
@@ -167,12 +167,13 @@ ANALYSIS:"""
 
         # Step 4: Call Groq
         response = self.client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[
                 {"role": "system", "content": system_message},
                 {"role": "user",   "content": user_message}
             ],
-            max_tokens=1024,
+            max_tokens=2048,
+            reasoning_effort="low",
             temperature=0.1   # low temperature = factual, not creative
         )
 
